@@ -1,0 +1,79 @@
+.container {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:not(:nth-of-type(1)) {
+  margin-top: 12px;
+}
+
+.item {
+  display: flex;
+  cursor: pointer;
+}
+
+.item > p, s {
+  margin-left: 12px;
+  color: var(--gray-100);
+}
+
+.inputCheckbox {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  border: 2px solid var(--blue);
+  color: currentColor;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+.inputCheckbox:hover {
+  border-color: var(--blue-dark);
+  background-color: #1E6F9F20;
+}
+
+.inputCheckbox::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--purple-dark);
+  background-image: url('../assets/checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.inputCheckbox:checked::before {
+  transform: scale(1);
+}
+
+.removeButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.removeButton:hover {
+  background-color: var(--gray-400);
+}
